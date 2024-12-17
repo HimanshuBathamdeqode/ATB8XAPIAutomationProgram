@@ -16,6 +16,7 @@ public class APITesting013_Assertions_Real_examples {
     Response response;
     String token;
     Integer bookingId;
+    private io.restassured.response.ValidatableResponse ValidatableResponse;
 
     //Post --> Create ---> Verify the response
 
