@@ -5,6 +5,7 @@
         <groups>
             <run>
                 <include name="qa"></include>
+                <exclude name="reg"></exclude>
             </run>
 
         </groups>

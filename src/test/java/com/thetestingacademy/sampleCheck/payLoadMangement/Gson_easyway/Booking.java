@@ -1,14 +1,28 @@
-package com.thetestingacademy.sampleCheck.payLoadMangement;
+package com.thetestingacademy.sampleCheck.payLoadMangement.Gson_easyway;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Booking {
 
+    @SerializedName("firstname")
+    @Expose
     private String firstname;
-
+    @SerializedName("lastname")
+    @Expose
     private String lastname;
+    @SerializedName("totalprice")
+    @Expose
     private Integer totalprice;
-    private  Boolean depositpaid;
-    private  String additionalneeds;
-    private  BookingDates bookingDates;
+    @SerializedName("depositpaid")
+    @Expose
+    private Boolean depositpaid;
+    @SerializedName("bookingdates")
+    @Expose
+    private Bookingdates bookingdates;
+    @SerializedName("additionalneeds")
+    @Expose
+    private String additionalneeds;
 
     public String getFirstname() {
         return firstname;
@@ -42,6 +56,14 @@ public class Booking {
         this.depositpaid = depositpaid;
     }
 
+    public Bookingdates getBookingdates() {
+        return bookingdates;
+    }
+
+    public void setBookingdates(Bookingdates bookingdates) {
+        this.bookingdates = bookingdates;
+    }
+
     public String getAdditionalneeds() {
         return additionalneeds;
     }
@@ -50,11 +72,4 @@ public class Booking {
         this.additionalneeds = additionalneeds;
     }
 
-    public BookingDates getBookingDates() {
-        return bookingDates;
-    }
-
-    public void setBookingDates(BookingDates bookingDates) {
-        this.bookingDates = bookingDates;
-    }
 }
